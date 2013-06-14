@@ -48,7 +48,7 @@ set ignorecase                  " searches are not case-sensitive
 
 autocmd BufWritePre * :%s/\s\+$//e  " strip trailing spaces
 
-"folding settings
+" fold settings
 set foldmethod=indent           " fold based on indentation levels
 set foldnestmax=5               " deepest fold level
 set nofoldenable                " dont fold by default
