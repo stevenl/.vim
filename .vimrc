@@ -10,15 +10,30 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+Bundle 'fholgado/minibufexpl'
+Bundle 'kien/ctrlp'
+
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2                " always show the status line
 set encoding=utf-8              " powerline needs to display unicode characters
 " get font from https://github.com/eugeneching/consolas-powerline-vim
-set guifont=Consolas\ for\ Powerline\ FixedD:h9
+set guifont=Consolas_for_Powerline_FixedD:h9:b:cANSI
 let g:Powerline_symbols = 'fancy'
 
-"Bundle 'vim-perl/vim-perl'
+Bundle 'majutsushi/tagbar'
+nmap <F9> :TagbarToggle<CR>
 
+Bundle 'tpope/vim-fugitive'
+
+Bundle 'scrooloose/nerdtree'
+nmap <F2> :NERDTreeToggle<CR>
+
+Bundle 'scrooloose/syntastic'
+
+Bundle 'vim-perl/vim-perl'
+
+set backupdir=.\.backup,C:\temp,.
+set directory=.,.\.backup,C:\temp
 set clipboard=unnamed           " use system clipboard
 
 colorscheme koehler
@@ -53,5 +68,18 @@ set foldmethod=indent           " fold based on indentation levels
 set foldnestmax=5               " deepest fold level
 set nofoldenable                " dont fold by default
 
-set backupdir=.\.backup,C:\temp,.
-set directory=.,.\.backup,C:\temp
+" Tagbar settings to recognise Perl Moose
+let g:tagbar_type_perl = {
+    \ 'kinds' : [
+        \ 'p:packages:1:0',
+        \ 'e:extends',
+        \ 'r:roles',
+        \ 'c:constants:0:0',
+        \ 'f:formats:0:0',
+        \ 'a:attributes',
+        \ 's:subroutines',
+        \ 'l:labels',
+    \ ],
+    \ 'deffile' : '$HOME/.vim/ctags/perl.cnf'
+\ }
+let Tlist_Show_One_File = 1
