@@ -32,11 +32,13 @@ Bundle 'scrooloose/syntastic'
 
 Bundle 'vim-perl/vim-perl'
 
+Bundle 'wesgibbs/vim-irblack'
+colorscheme ir_black
+
 set backupdir=.\.backup,C:\temp,.
 set directory=.,.\.backup,C:\temp
 set clipboard=unnamed           " use system clipboard
 
-colorscheme koehler
 syntax on                       " switch on syntax highlighting
 set number                      " display line numbers
 set backspace=indent,eol,start  " delete over line breaks and indentation
