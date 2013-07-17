@@ -28,8 +28,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 nmap <F2> :NERDTreeToggle<CR>
 
-Bundle 'scrooloose/syntastic'
-
 Bundle 'vim-perl/vim-perl'
 
 Bundle 'wesgibbs/vim-irblack'
