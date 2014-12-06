@@ -1,6 +1,19 @@
-My vim configuration
+Setup on Mac OS X
+=================
 
-Setup on Windows:
+    cd ~
+    git clone https://github.com/stevenl/.vim.git
+    ln -s .vim/.vimrc .vimrc
+    ln -s .vim/.gvimrc .gvimrc
+
+    # download files for submodules
+    cd .vim
+    git submodule init
+    git submodule update
+    vim +BundleInstall +qall
+
+Setup on Windows
+================
 
     cd %USERPROFILE%
     git clone https://github.com/stevenl/.vim.git
@@ -15,8 +28,10 @@ Setup on Windows:
 
     # install fonts from the consolas-powerline-vim directory
 
-Issues:
+Issues
+------
 
 >   mklink: You do not have sufficient privilege to perform this operation
 
-At the Start menu, type `cmd` in the search box. You will see `cmd.exe` in the list. Right click on it and select "Run as Administrator".
+At the Start menu, type `cmd` in the search box. You will see `cmd.exe` in the
+list. Right click on it and select "Run as Administrator".

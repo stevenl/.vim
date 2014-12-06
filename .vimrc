@@ -1,40 +1,29 @@
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+set nocompatible                " Use Vim rather than Vi settings
 
 " bundles
-filetype off                   " required!
+filetype off                    " required!
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'fholgado/minibufexpl'
-Bundle 'kien/ctrlp'
-
+"Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2                " always show the status line
 set encoding=utf-8              " powerline needs to display unicode characters
-" get font from https://github.com/eugeneching/consolas-powerline-vim
-set guifont=Consolas_for_Powerline_FixedD:h9:b:cANSI
-let g:Powerline_symbols = 'fancy'
 
 Bundle 'majutsushi/tagbar'
 nmap <F9> :TagbarToggle<CR>
 
-Bundle 'tpope/vim-fugitive'
-
-Bundle 'scrooloose/nerdtree'
-nmap <F2> :NERDTreeToggle<CR>
-
-Bundle 'vim-perl/vim-perl'
+"Bundle 'vim-perl/vim-perl'
 
 Bundle 'wesgibbs/vim-irblack'
 colorscheme ir_black
 
-set backupdir=.\.backup,C:\temp,.
-set directory=.,.\.backup,C:\temp
+set backupcopy=yes
+set backupdir=~/.Trash,.,/tmp
+set directory=.,~/.Trash,/tmp
 set clipboard=unnamed           " use system clipboard
 
 syntax on                       " switch on syntax highlighting
@@ -48,18 +37,19 @@ set matchpairs+=<:>             " allow % to bounce between angles too
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
-set tabstop=4                   " indentation size
-set softtabstop=4               " backspace spaces as tabs
-set shiftwidth=4                " indent/outdent (>>, <<, ==) level
-set expandtab                   " convert tabs to spaces
 "set autoindent                  " use same indentation as prev line
 set cindent                     " auto C-style indentation
+set expandtab                   " convert tabs to spaces
+set shiftwidth=4                " indent/outdent (>>, <<, ==) level
+set softtabstop=4               " backspace spaces as tabs
+set tabstop=4                   " indentation size
 inoremap <S-Tab> <C-V><Tab>
                                 " shift-tab inserts a real tab
 " search
 set hlsearch                    " highlight search results
-set incsearch                   " refine search as you type
 set ignorecase                  " searches are not case-sensitive
+set smartcase                   " case-sensitive if search contains uppercase
+set incsearch                   " refine search as you type
 
 autocmd BufWritePre * :%s/\s\+$//e  " strip trailing spaces
 
