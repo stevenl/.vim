@@ -8,10 +8,11 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-"Bundle 'bling/vim-airline'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 set laststatus=2                " always show the status line
 set encoding=utf-8              " powerline needs to display unicode characters
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 Bundle 'majutsushi/tagbar'
 nmap <F9> :TagbarToggle<CR>
