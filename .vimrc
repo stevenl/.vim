@@ -17,6 +17,9 @@ let g:airline_right_sep=''
 Bundle 'majutsushi/tagbar'
 nmap <F9> :TagbarToggle<CR>
 
+" Git
+Bundle 'tpope/vim-fugitive'
+
 "Bundle 'vim-perl/vim-perl'
 
 Bundle 'wesgibbs/vim-irblack'
