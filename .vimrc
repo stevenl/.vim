@@ -22,9 +22,10 @@ nmap <F9> :TagbarToggle<CR>
 Bundle 'wesgibbs/vim-irblack'
 colorscheme ir_black
 
+set backup
 set backupcopy=yes
-set backupdir=~/.Trash,.,/tmp
-set directory=.,~/.Trash,/tmp
+set backupdir=/tmp,.
+set directory=.,/tmp//
 set clipboard=unnamed           " use system clipboard
 
 syntax on                       " switch on syntax highlighting
