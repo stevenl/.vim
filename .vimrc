@@ -76,6 +76,8 @@ let g:tagbar_type_perl = {
 \ }
 let Tlist_Show_One_File = 1
 
+set mouse=a                     " enable use of a mouse with the terminal
+
 " Ensure that cursor shape changes between insert and normal mode in iTerm2
 if $TERM_PROGRAM =~ "iTerm"
     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
