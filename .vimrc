@@ -9,8 +9,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Theme
-Bundle 'wesgibbs/vim-irblack'
-colorscheme ir_black
+colorscheme default
+source ~/.vim/cyclecolor.vim
 
 " Status line
 Bundle 'bling/vim-airline'
