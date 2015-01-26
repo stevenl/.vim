@@ -1,5 +1,15 @@
 set nocompatible                " Use Vim rather than Vi settings
 
+" F2 = toggle line numbering
+" F3 = toggle showing invisible characters
+" F4 = previous color scheme
+" F5 = next color scheme
+
+nmap <f2> :set number! number?<cr>
+nmap <f3> :set list! list?<cr>
+highlight LineNbr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
+highlight NonText ctermfg=8 guifg=gray
+
 " Bundles
 filetype off                    " required by Vundle
 set runtimepath+=~/.vim/bundle/vundle/
@@ -56,7 +66,7 @@ syntax on                       " switch on syntax highlighting
 set number                      " display line numbers
 set backspace=indent,eol,start  " delete over line breaks and indentation
 set textwidth=78                " wrap at this column
-set colorcolumn=80              " set a column marker
+set colorcolumn=80,100          " set a column marker
 set showmatch                   " show matching brackets
 set matchpairs+=<:>             " allow % to bounce between angles too
 
