@@ -62,6 +62,9 @@ set backupdir=/tmp,.
 set directory=.,/tmp//
 set clipboard=unnamed           " use system clipboard
 
+" autocmd BufWritePre * :%s/\s\+$//e  " strip trailing spaces
+nnoremap <Leader>W :%s/\s\+$//e<CR>
+
 syntax on                       " switch on syntax highlighting
 set number                      " display line numbers
 set backspace=indent,eol,start  " delete over line breaks and indentation
@@ -86,8 +89,6 @@ set hlsearch                    " highlight search results
 set ignorecase                  " searches are not case-sensitive
 set smartcase                   " case-sensitive if search contains uppercase
 set incsearch                   " refine search as you type
-
-autocmd BufWritePre * :%s/\s\+$//e  " strip trailing spaces
 
 " fold settings
 set foldmethod=indent           " fold based on indentation levels
