@@ -65,10 +65,13 @@ set clipboard=unnamed           " use system clipboard
 syntax on                       " switch on syntax highlighting
 set number                      " display line numbers
 set backspace=indent,eol,start  " delete over line breaks and indentation
-set textwidth=78                " wrap at this column
-set colorcolumn=80,100          " set a column marker
 set showmatch                   " show matching brackets
 set matchpairs+=<:>             " allow % to bounce between angles too
+
+set textwidth=95                " wrap at this column
+if version >= 703
+    set colorcolumn=80,100      " set a column marker
+endif
 
 "set autoindent                  " use same indentation as prev line
 set cindent                     " auto C-style indentation
