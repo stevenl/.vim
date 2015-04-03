@@ -86,9 +86,10 @@ inoremap <S-Tab> <C-V><Tab>
                                 " shift-tab inserts a real tab
 " search
 set hlsearch                    " highlight search results
+set incsearch                   " refine search as you type
 set ignorecase                  " searches are not case-sensitive
 set smartcase                   " case-sensitive if search contains uppercase
-set incsearch                   " refine search as you type
+set gdefault                    " replace all matches on line, not just the first
 
 " fold settings
 set foldmethod=indent           " fold based on indentation levels
