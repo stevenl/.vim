@@ -91,7 +91,9 @@ set foldmethod=indent           " fold based on indentation levels
 set foldnestmax=5               " deepest fold level
 set nofoldenable                " dont fold by default
 
-set mouse=a                     " enable use of a mouse with the terminal
+if has('mouse')
+    set mouse=a                 " enable use of a mouse with the terminal
+endif
 
 " Ensure that cursor shape changes between insert and normal mode in iTerm2
 if $TERM_PROGRAM =~ "iTerm"
