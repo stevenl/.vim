@@ -20,6 +20,9 @@ Bundle 'gmarik/vundle'
 " F3 = previous color scheme
 " F4 = next color scheme
 Bundle 'CycleColor'
+Bundle 'tomasr/molokai'
+colorscheme molokai
+set cursorline                  " highlight the current line
 
 " Status line
 Bundle 'bling/vim-airline'
