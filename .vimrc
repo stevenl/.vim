@@ -1,12 +1,10 @@
 set nocompatible                " Use Vim rather than Vi settings
 
 " F2 = toggle line numbering
-" F3 = toggle showing invisible characters
-" F4 = previous color scheme
-" F5 = next color scheme
+" F5 = toggle showing invisible characters
 
 nmap <f2> :set number! number?<cr>
-nmap <f3> :set list! list?<cr>
+nmap <f5> :set list! list?<cr>
 highlight LineNbr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 highlight NonText ctermfg=8 guifg=gray
 
@@ -18,9 +16,10 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" Theme
-colorscheme default
-source ~/.vim/cyclecolor.vim
+" Color scheme
+" F3 = previous color scheme
+" F4 = next color scheme
+Bundle 'CycleColor'
 
 " Status line
 Bundle 'bling/vim-airline'
