@@ -20,8 +20,8 @@ Bundle 'gmarik/vundle'
 " F3 = previous color scheme
 " F4 = next color scheme
 Bundle 'CycleColor'
-Bundle 'tomasr/molokai'
-colorscheme molokai
+Bundle 'sickill/vim-monokai'
+colorscheme monokai
 set cursorline                  " highlight the current line
 
 " Status line
