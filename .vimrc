@@ -34,6 +34,10 @@ let g:airline_right_sep=''      " to avoid need for patched fonts
 " Git
 Bundle 'tpope/vim-fugitive'
 
+" Surrounding parenthese, brackets, quotes, XML tags, ...
+" :[dcy]s<surrounding> (delete, change, add)
+Bundle 'tpope/vim-surround'
+
 " Display tags to get a structural overview
 Bundle 'majutsushi/tagbar'
 nmap <F9> :TagbarToggle<CR>
