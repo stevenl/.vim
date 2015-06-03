@@ -38,6 +38,10 @@ Bundle 'tpope/vim-fugitive'
 " :[dcy]s<surrounding> (delete, change, add)
 Bundle 'tpope/vim-surround'
 
+" Align text
+" :Tab /<regex>
+Bundle 'godlygeek/tabular'
+
 " Display tags to get a structural overview
 Bundle 'majutsushi/tagbar'
 nmap <F9> :TagbarToggle<CR>
