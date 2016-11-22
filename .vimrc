@@ -5,6 +5,7 @@ set nocompatible                " Use Vim rather than Vi settings
 
 nmap <f2> :set number! number?<cr>
 nmap <f5> :set list! list?<cr>
+set listchars=tab:>·
 highlight LineNbr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 highlight NonText ctermfg=8 guifg=gray
 
