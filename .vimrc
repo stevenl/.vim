@@ -21,8 +21,10 @@ Bundle 'gmarik/vundle'
 " F3 = previous color scheme
 " F4 = next color scheme
 Bundle 'CycleColor'
-Bundle 'sickill/vim-monokai'
-colorscheme monokai
+Bundle 'nanotech/jellybeans.vim'
+colorscheme jellybeans
+set background=dark
+set t_Co=256
 set cursorline                  " highlight the current line
 
 " Status line
