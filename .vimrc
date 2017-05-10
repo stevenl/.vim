@@ -9,6 +9,10 @@ set listchars=tab:>·
 highlight LineNbr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 highlight NonText ctermfg=8 guifg=gray
 
+" Set F10 to toggle paste mode
+" for pasting from the clipboard without indentation being messed up
+set pastetoggle=<f10>
+
 " Bundles
 filetype off                    " required by Vundle
 set runtimepath+=~/.vim/bundle/vundle/
