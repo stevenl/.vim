@@ -15,42 +15,41 @@ set pastetoggle=<f10>
 
 " Bundles
 filetype off                    " required by Vundle
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Color scheme
 " F3 = previous color scheme
 " F4 = next color scheme
-Bundle 'CycleColor'
-Bundle 'nanotech/jellybeans.vim'
-colorscheme jellybeans
+Plugin 'CycleColor'
+Plugin 'nanotech/jellybeans.vim'
 set background=dark
 set t_Co=256
 set cursorline                  " highlight the current line
 
 " Status line
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 set laststatus=2                " always show the status line
 set encoding=utf-8              " powerline needs to display unicode characters
 let g:airline_left_sep=''       " don't use arrows in status line
 let g:airline_right_sep=''      " to avoid need for patched fonts
 
 " Git
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Surrounding parenthese, brackets, quotes, XML tags, ...
 " :[dcy]s<surrounding> (delete, change, add)
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " Align text
 " :Tab /<regex>
-Bundle 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
 
 " Display tags to get a structural overview
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 nmap <F9> :TagbarToggle<CR>
 " Tagbar settings to recognise Perl Moose
 let g:tagbar_type_perl = {
@@ -68,7 +67,10 @@ let g:tagbar_type_perl = {
 \ }
 let Tlist_Show_One_File = 1
 
-"Bundle 'vim-perl/vim-perl'
+"Plugin 'vim-perl/vim-perl'
+
+call vundle#end()
+colorscheme jellybeans
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
